@@ -1,1 +1,1 @@
-"# fruits-ecommerce" 
+this is an ecommerce api for fruits and its still under development to enhance the functionality. this api is 90 % done and what is remaining is handling user resources after signing in, error handling and intergration with the frontend that is being developend using vue js
