@@ -43,20 +43,6 @@ const userSchema = new mongoose.Schema({
         }
         
     },
-    cart: [
-        {
-            productId: {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: "Fruit",
-                required: true
-            },
-            quantity: {
-                type: Number,
-                required: true,
-                min: 1
-            }
-        }
-    ],
     passwordChangedAt: Date,
     passResetToken: String,
     passwordTokenExpire: Date
