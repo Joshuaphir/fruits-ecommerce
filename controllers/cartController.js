@@ -37,7 +37,10 @@ exports.addToCart = async (req, res) => {
 
 exports.getCart = async (req, res) => {
     try {
-        const cart = await Cart.findOne({ user: req.user.id }).populate('items.productId');
+        const cart = await Cart.findOne({ user: req.user.id }).populate({
+            path: 'items.productId',
+            select: 'name price image' // Ensure only name, price, and image are included
+        });
         if (!cart) {
             return res.status(404).json({ message: "Cart not found" });
         }
